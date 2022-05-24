@@ -1,0 +1,13 @@
+plugins {
+    id 'com.palantir.docker'
+}
+
+dependencies {
+    docker project(':first')
+}
+
+docker {
+    name 'second:latest'
+    dockerfile file('Dockerfile')
+    files 'second.txt'
+}

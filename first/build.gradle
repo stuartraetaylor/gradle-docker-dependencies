@@ -1,0 +1,9 @@
+plugins {
+    id 'com.palantir.docker'
+}
+
+docker {
+    name 'first:latest'
+    dockerfile file('Dockerfile')
+    files 'first.txt'
+}
